@@ -20,7 +20,10 @@ public class ChatController {
 
         return message;
     }
-
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/chat";
+    }
     @GetMapping("/chat")
     public String chat() {
         return "chat";
